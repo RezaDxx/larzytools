@@ -1,0 +1,108 @@
+body {
+font-family: 'Segoe UI', sans-serif;
+background: #fafafa;
+padding: 40px 20px;
+color: #222;
+}
+
+.wrapper {
+max-width: 800px;
+margin: auto;
+}
+
+.section {
+background: white;
+padding: 25px 30px;
+border-radius: 14px;
+margin-bottom: 25px;
+box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+h1 {
+font-size: 26px;
+margin-bottom: 10px;
+}
+
+p {
+color: #666;
+margin-bottom: 10px;
+}
+
+label {
+display: block;
+margin-top: 15px;
+font-weight: 600;
+font-size: 14px;
+color: #444;
+}
+
+textarea, input, select {
+width: 100%;
+margin-top: 6px;
+padding: 10px;
+font-size: 14px;
+border-radius: 8px;
+border: 1px solid #ccc;
+background: #fff;
+}
+
+textarea {
+min-height: 90px;
+resize: vertical;
+}
+
+.btn {
+width: 100%;
+margin-top: 15px;
+padding: 12px;
+font-size: 15px;
+font-weight: bold;
+border-radius: 8px;
+border: none;
+background: #7caeff;
+color: white;
+cursor: pointer;
+}
+
+.btn:hover {
+background: #5d8ef2;
+}
+
+.flex {
+display: flex;
+gap: 20px;
+}
+
+.half {
+flex: 1;
+}
+
+.progress-container {
+margin-top: 15px;
+width: 100%;
+background: #eee;
+border-radius: 10px;
+overflow: hidden;
+height: 12px;
+}
+
+.progress-bar {
+height: 100%;
+width: 0%;
+background: #7caeff;
+transition: width 0.3s;
+}
+
+.result-box {
+margin-top: 15px;
+background: #f8f8f8;
+padding: 12px;
+border-radius: 8px;
+font-size: 14px;
+}
+
+.link {
+color: #0070cc;
+text-decoration: underline;
+cursor: pointer;
+}

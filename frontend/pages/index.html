@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utility Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card-box { 
+            cursor: pointer; 
+            transition: all 0.2s ease-in-out; 
+        }
+        .card-box:hover { 
+            transform: translateY(-4px);
+            filter: brightness(0.95);
+        }
+        .icon { 
+            width: 32px; 
+            height: 32px; 
+            opacity: 0.8; 
+        }
+        /* Pastel Colors */
+        .pastel-media { background-color: #dbeafe; }
+        .pastel-image { background-color: #d1fae5; }
+        .pastel-file { background-color: #fef9c3; }
+        .pastel-privacy { background-color: #ede9fe; }
+        .pastel-daily { background-color: #ffe4e6; }
+        .pastel-dev { background-color: #f3f4f6; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 transition-colors duration-200" id="body">
+
+    <header class="flex justify-between items-center p-6 border-b border-gray-100">
+        <h1 class="text-xl font-bold tracking-tight">Utility Hub</h1>
+        <button onclick="toggleDark()" class="px-5 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium transition-all">
+            Toggle Dark Mode
+        </button>
+    </header>
+
+    <section class="py-12 px-6 text-center">
+        <h2 class="text-4xl font-extrabold mb-3 tracking-tight">Tools Dashboard</h2>
+        <p class="text-gray-500 text-lg mb-8">Kumpulan alat digital ringan, cepat, dan esensial.</p>
+        
+        <div class="relative max-w-lg mx-auto">
+            <input type="text" placeholder="Cari tools yang Anda butuhkan..." 
+                   class="w-full px-6 py-3 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto p-6 space-y-10">
+        
+        <section>
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 ml-1">Media Downloader</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-box pastel-media p-5 rounded-2xl" onclick="go('youtube.html')">
+                    <img class="icon mb-3" src="../assets/icons/youtube.png">
+                    <div class="font-semibold text-blue-900">YouTube Downloader</div>
+                </div>
+                <div class="card-box pastel-media p-5 rounded-2xl" onclick="go('instagram.html')">
+                    <img class="icon mb-3" src="../assets/icons/instagram.png">
+                    <div class="font-semibold text-blue-900">Instagram Downloader</div>
+                </div>
+                <div class="card-box pastel-media p-5 rounded-2xl" onclick="go('tiktok.html')">
+                    <img class="icon mb-3" src="../assets/icons/tik-tok.png">
+                    <div class="font-semibold text-blue-900">TikTok Downloader</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 ml-1">Image Editor</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-box pastel-image p-5 rounded-2xl" onclick="go('bgremove.html')">
+                    <img class="icon mb-3" src="../assets/icons/remove.png">
+                    <div class="font-semibold text-green-900">Background Remover</div>
+                </div>
+                <div class="card-box pastel-image p-5 rounded-2xl" onclick="go('image-compress.html')">
+                    <img class="icon mb-3" src="../assets/icons/compress.png">
+                    <div class="font-semibold text-green-900">Image Compression</div>
+                </div>
+                <div class="card-box pastel-image p-5 rounded-2xl" onclick="go('image-resize.html')">
+                    <img class="icon mb-3" src="../assets/icons/resize.png">
+                    <div class="font-semibold text-green-900">Image Resizer</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 ml-1">Document Tools</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-box pastel-file p-5 rounded-2xl" onclick="go('pdf-merge.html')">
+                    <img class="icon mb-3" src="../assets/icons/pdfmerge.png">
+                    <div class="font-semibold text-yellow-900">Merge PDF Files</div>
+                </div>
+                <div class="card-box pastel-file p-5 rounded-2xl" onclick="go('pdf-compress.html')">
+                    <img class="icon mb-3" src="../assets/icons/pdfcompress.png">
+                    <div class="font-semibold text-yellow-900">Compress PDF</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 ml-1">Privacy & Security</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-box pastel-privacy p-5 rounded-2xl" onclick="go('encrypt.html')">
+                    <img class="icon mb-3" src="../assets/icons/lock.png">
+                    <div class="font-semibold text-purple-900">Data Encryption</div>
+                </div>
+                <div class="card-box pastel-privacy p-5 rounded-2xl" onclick="go('decrypt.html')">
+                    <img class="icon mb-3" src="../assets/icons/unlock.png">
+                    <div class="font-semibold text-purple-900">Data Decryption</div>
+                </div>
+                <div class="card-box pastel-privacy p-5 rounded-2xl" onclick="go('hash.html')">
+                    <img class="icon mb-3" src="../assets/icons/hash.png">
+                    <div class="font-semibold text-purple-900">Hash Generator</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 ml-1">Daily Utilities</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-box pastel-daily p-5 rounded-2xl" onclick="go('unit-convert.html')">
+                    <img class="icon mb-3" src="../assets/icons/unit.png">
+                    <div class="font-semibold text-pink-900">Unit Converter</div>
+                </div>
+                <div class="card-box pastel-daily p-5 rounded-2xl" onclick="go('qr-gen.html')">
+                    <img class="icon mb-3" src="../assets/icons/qr.png">
+                    <div class="font-semibold text-pink-900">QR Code Generator</div>
+                </div>
+                <div class="card-box pastel-daily p-5 rounded-2xl" onclick="go('qr-read.html')">
+                    <img class="icon mb-3" src="../assets/icons/scan.png">
+                    <div class="font-semibold text-pink-900">QR Code Scanner</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 ml-1">Developer Tools</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-box pastel-dev p-5 rounded-2xl" onclick="go('json-formatter.html')">
+                    <img class="icon mb-3" src="../assets/icons/json.png">
+                    <div class="font-semibold text-gray-800">JSON Formatter</div>
+                </div>
+                <div class="card-box pastel-dev p-5 rounded-2xl" onclick="go('markdown-editor.html')">
+                    <img class="icon mb-3" src="../assets/icons/md.png">
+                    <div class="font-semibold text-gray-800">Markdown Editor</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-10 text-center text-gray-400 text-sm">
+        &copy; 2026 Utility Hub — Dikembangkan untuk efisiensi kerja.
+    </footer>
+
+    <script>
+        function toggleDark() {
+            const b = document.getElementById("body")
+            b.classList.toggle("bg-gray-900")
+            b.classList.toggle("text-white")
+            // Tambahkan logika tambahan untuk mengubah warna teks section header jika diperlukan
+        }
+        function go(page) {
+            window.location.href = page
+        }
+    </script>
+</body>
+</html>

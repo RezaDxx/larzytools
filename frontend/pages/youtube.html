@@ -1,0 +1,36 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>YouTube Downloader</title> <link rel="stylesheet" href="../css/style.css"> </head> <body> <div class="wrapper">
+<div class="section">
+    <h1>YouTube Downloader</h1>
+    <p>Batch download video atau audio dengan format pilihan.</p>
+</div>
+
+<div class="section">
+    
+    <label>Link YouTube (1 per baris)</label>
+    <textarea id="urls" placeholder="https://www.youtube.com/watch?v=xxxxxx"></textarea>
+
+    <div class="flex">
+        <div class="half">
+            <label>Mode</label>
+            <select id="mode">
+                <option value="audio">Audio</option>
+                <option value="video">Video</option>
+            </select>
+        </div>
+
+        <div class="half">
+            <label>Format</label>
+            <select id="filetype"></select>
+        </div>
+    </div>
+
+    <button class="btn" onclick="startDownload()">Download</button>
+
+    <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+
+    <div id="output" class="result-box"></div>
+
+</div>
+</div> <script src="../js/youtube.js"></script> </body> </html>
